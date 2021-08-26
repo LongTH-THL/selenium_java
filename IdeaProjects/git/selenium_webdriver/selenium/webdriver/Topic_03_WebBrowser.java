@@ -9,6 +9,5 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
-public class Topic_02_Xpath_CSS {
-
+public class Topic_03_WebBrowser {
 }
