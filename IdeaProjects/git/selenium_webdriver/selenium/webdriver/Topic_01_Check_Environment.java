@@ -18,12 +18,12 @@ public class Topic_01_Check_Environment {
     public void beforeClass()
     {   //comment tung step vao
         // Bước 1: Lấy đường dẫn chromeDriver
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/browserDriver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/long/Downloads/selenium/chromedriver");
         // Bước 2: Khởi tạo
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         // Bước 3: Truy cập URL
-        driver.get("http://demo.guru99.com/v4/");
+        driver.get("https://demo.guru99.com/v4/");
     }
 
     @Test
@@ -56,6 +56,7 @@ public class Topic_01_Check_Environment {
     @AfterClass
     public void afterClass()
     {
+
         driver.quit();
     }
 }
