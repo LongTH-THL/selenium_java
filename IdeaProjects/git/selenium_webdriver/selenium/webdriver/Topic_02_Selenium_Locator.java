@@ -44,7 +44,7 @@ public class Topic_02_Selenium_Locator {
         // Password
         WebElement notiPass = driver.findElement(By.xpath("//label[@id='txtPassword-error']"));
         String TextPass = notiPass.getText();
-        Assert.assertEquals(notiPass,"Vui lòng nhập mật khẩu");
+        Assert.assertEquals(TextPass,"Vui lòng nhập mật khẩu");
         // Confirm Pass
         WebElement notiCPass =driver.findElement(By.xpath("//label[@id='txtCPassword-error']"));
         String TextCPass = notiCPass.getText();
@@ -53,7 +53,6 @@ public class Topic_02_Selenium_Locator {
         WebElement notiPhone = driver.findElement(By.xpath("//label[@id='txtPhone-error']"));
         String TextPhone = notiPhone.getText();
         Assert.assertEquals(TextPhone,"Vui lòng nhập số điện thoại.");
-
     }
 
 
