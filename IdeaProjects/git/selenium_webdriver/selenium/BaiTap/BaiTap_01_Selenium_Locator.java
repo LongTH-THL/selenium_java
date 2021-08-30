@@ -1,4 +1,4 @@
-package webdriver;
+package BaiTap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
-public class Topic_02_Selenium_Locator {
+public class BaiTap_01_Selenium_Locator {
 
     WebDriver driver;
 
