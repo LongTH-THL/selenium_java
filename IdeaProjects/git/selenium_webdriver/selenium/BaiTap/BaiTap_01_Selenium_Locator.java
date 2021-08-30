@@ -8,10 +8,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import java.util.concurrent.TimeUnit;
-public class BaiTap_01_Selenium_Locator {
 
+
+public class BaiTap_01_Selenium_Locator {
     WebDriver driver;
 
     @BeforeClass
@@ -55,7 +55,6 @@ public class BaiTap_01_Selenium_Locator {
         String TextPhone = notiPhone.getText();
         Assert.assertEquals(TextPhone,"Vui lòng nhập số điện thoại.");
     }
-
     @Test
     public void TC_02_Register_With_Invalid_Email(){
         // click to Name
@@ -118,7 +117,6 @@ public class BaiTap_01_Selenium_Locator {
         String TextCMail = notiConfirmMail.getText();
         Assert.assertEquals(TextCMail,"Email nhập lại không đúng");
     }
-
     @Test
     public void TC_04_TC_03_Register_With_Password(){
 
@@ -151,7 +149,6 @@ public class BaiTap_01_Selenium_Locator {
         String TextCPass = notiConfirmPass.getText();
         Assert.assertEquals(TextCPass,"Mật khẩu phải có ít nhất 6 ký tự");
     }
-
     @Test
     public void TC_05_Register_With_Incorect_Confirm_Password(){
         // click to Pass
@@ -174,7 +171,6 @@ public class BaiTap_01_Selenium_Locator {
         String TextCPass = notiConfirmPass.getText();
         Assert.assertEquals(TextCPass,"Mật khẩu bạn nhập không khớp");
     }
-
     @Test
     public void TC_06_Register_With_Invalid_Phone_Number(){
         // clickCPass
@@ -195,8 +191,6 @@ public class BaiTap_01_Selenium_Locator {
         String TextCPass = notiPhone.getText();
         Assert.assertEquals(TextCPass,"Vui lòng nhập con số");
     }
-
-
 
 
     @AfterClass

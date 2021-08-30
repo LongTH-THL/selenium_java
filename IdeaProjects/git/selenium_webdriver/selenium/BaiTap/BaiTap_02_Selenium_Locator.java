@@ -1,5 +1,4 @@
 package BaiTap;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,8 +10,8 @@ import org.testng.annotations.Test;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-public class BaiTap_02_Selenium_Locator {
 
+public class BaiTap_02_Selenium_Locator {
     WebDriver driver;
     String email;
     String firstName = "Hai";
@@ -67,7 +66,6 @@ public class BaiTap_02_Selenium_Locator {
         String errorMail = notiEMail.getText();
         Assert.assertEquals(errorMail,"Please enter a valid email address. For example johndoe@domain.com.");
     }
-
     @Test
     public void TC_03_LoginWithPassword_5_Character(){
         // Valid Email
@@ -90,7 +88,6 @@ public class BaiTap_02_Selenium_Locator {
         String errorPass = errorPassword.getText();
         Assert.assertEquals(errorPass,"Please enter 6 or more characters without leading or trailing spaces.");
     }
-
     @Test
     public void TC_04_LoginWithIncorrect_Email_Password(){
         // Valid Email
@@ -113,7 +110,6 @@ public class BaiTap_02_Selenium_Locator {
         String errorPageText = errorPage.getText();
         Assert.assertEquals(errorPageText,"Invalid login or password.");
     }
-
     @Test
     public void TC_05_CreatNew_Account(){
         // Click button Creat account
@@ -170,7 +166,6 @@ public class BaiTap_02_Selenium_Locator {
         String homePageTitle = driver.getTitle();
         Assert.assertEquals(homePageTitle,"Home page");
     }
-
     @Test
     public void TC_06_LoginWithValid_Email_Password(){
         // Click to My Account Button
@@ -199,11 +194,11 @@ public class BaiTap_02_Selenium_Locator {
 
     }
 
+
     public int randomData(){
         Random random = new Random();
         return random.nextInt(999999);
     }
-
     @AfterClass
     public void afterClass()
     {
