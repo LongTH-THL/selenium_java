@@ -21,6 +21,7 @@ public class Topic_02_Selenium_Locator {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://alada.vn/tai-khoan/dang-ky.html");
+        driver.manage().window().maximize();
     }
 
     @Test
