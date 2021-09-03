@@ -30,7 +30,7 @@ public class BaiTap_02_Selenium_Locator {
     @Test
     public void TC_01_LoginWithEmpty_Email_and_Password(){
         // Click to My Account Button
-        WebElement myaccountButton = driver.findElement(By.xpath("(//a[@title='My Account'])[2]"));
+        WebElement myaccountButton = driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']"));
         myaccountButton.click();
         Assert.assertTrue(driver.findElement(By.xpath("//button[@title='Login']")).isDisplayed());
         // Click to login button
