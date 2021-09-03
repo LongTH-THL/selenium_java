@@ -1,14 +1,14 @@
-package webdriver;
+package BaiTap;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import java.util.concurrent.TimeUnit;
-
 
 public class BaiTap_03_Browser{
     WebDriver driver;
@@ -77,10 +77,7 @@ public class BaiTap_03_Browser{
 
     @Test
     public void TC_04_Get_Page_Source_Code(){
-        driver.get("http://live.demoguru99.com/index.php/");
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-
+        driver.navigate().back();
         // Click to My Account Button
         WebElement myAccountButton = driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']"));
         myAccountButton.click();
