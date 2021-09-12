@@ -81,6 +81,11 @@ public class BaiTap_03_Browser{
         // Click to My Account Button
         WebElement myAccountButton = driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']"));
         myAccountButton.click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         // Get Page source LoginPage
         String loginPageSource = driver.getPageSource();
         // Verify LoginSourcePageTitle
@@ -88,9 +93,14 @@ public class BaiTap_03_Browser{
         // Click button Creat account
         WebElement creatAccountButton = driver.findElement(By.xpath("//a[@title='Create an Account']"));
         creatAccountButton.click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         // Get Page Source CreatAccount Page
         String creatAccountPageSource = driver.getPageSource();
-        Assert.assertTrue(creatAccountPageSource.contains("CREATE AN ACCOUNT"));
+        Assert.assertTrue(creatAccountPageSource.contains("Create an Account"));
     }
 
 

@@ -145,7 +145,7 @@ public class BaiTap_02_Selenium_Locator {
         Assert.assertEquals(noti,"Thank you for registering with Main Website Store.");
 
         // Verify user
-        WebElement fullName = driver.findElement(By.xpath("(//div[@class='box-content']//p)[1]"));
+        WebElement fullName = driver.findElement(By.xpath("//h3[text()='Contact Information']/parent::div/following-sibling::div[@class='box-content']/p"));
         String fullNameActual = fullName.getText();
         System.out.println("full name ==" + fullName.getText());
         Assert.assertTrue(fullNameActual.contains(firstName));
