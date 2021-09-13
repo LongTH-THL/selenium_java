@@ -8,6 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 
@@ -45,6 +47,10 @@ public class Topic_00_Template {
 
     }
 
+    public int randomData() {
+        Random random = new Random();
+        return random.nextInt(999999);
+    }
 
     @AfterClass
     public void afterClass()
