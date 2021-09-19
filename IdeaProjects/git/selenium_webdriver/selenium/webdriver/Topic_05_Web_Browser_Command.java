@@ -117,23 +117,6 @@ public class Topic_05_Web_Browser_Command {
         driver.switchTo().alert();
         driver.switchTo().frame("");
     }
-    @Test
-    public void TC_02_(){
-    }
-    @Test
-    public void TC_03_(){
-    }
-    @Test
-    public void TC_04_(){
-    }
-    @Test
-    public void TC_05_(){
-
-    }
-    @Test
-    public void TC_06_(){
-
-    }
 
 
     @AfterClass

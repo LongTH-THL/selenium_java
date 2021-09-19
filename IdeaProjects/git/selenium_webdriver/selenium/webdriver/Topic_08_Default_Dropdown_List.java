@@ -10,6 +10,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -57,6 +59,13 @@ public class Topic_08_Default_Dropdown_List {
         select = new Select(driver.findElement(dateDropdowmBy));
         // chon 1 item
         select.selectByVisibleText(day);
+
+        List<WebElement> allItems = select.getOptions();
+        List<String> allItemsText = new ArrayList<String>();
+        for (WebElement item:allItems){
+            allItemsText.add(item.getText());
+        }
+
         // kiem tra dropdown co phai multiple select hay khong ???
         Assert.assertFalse(select.isMultiple());
         // kiem tra xem da chon dung cai item chua ???
