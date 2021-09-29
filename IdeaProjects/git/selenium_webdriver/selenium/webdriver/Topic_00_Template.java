@@ -35,21 +35,18 @@ public class Topic_00_Template {
     @Test
     public void TC_03_(){
     }
-    @Test
-    public void TC_04_(){
-    }
-    @Test
-    public void TC_05_(){
-
-    }
-    @Test
-    public void TC_06_(){
-
-    }
 
     public int randomData() {
         Random random = new Random();
         return random.nextInt(999999);
+    }
+
+    public void sleepInSecond(long timeoutInSecond){
+        try {
+            Thread.sleep(timeoutInSecond * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @AfterClass

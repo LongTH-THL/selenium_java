@@ -106,8 +106,6 @@ public class Topic_09_Custom_Dropdown_List {
 
         selectItemDropdown(parent3By, chil3By, "Starenweg 5");
         sleepInSecond(2);
-
-
     }
 
     @Test
@@ -190,7 +188,7 @@ public class Topic_09_Custom_Dropdown_List {
         explicitWait.until(ExpectedConditions.elementToBeClickable(parentBy)).click();
 
         // Presence
-        explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy((chilBy)));
+        //explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy((chilBy)));
 
         // Store lai tat ca element ( item cua dropdown)
         List<WebElement> allItems = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy((chilBy)));
