@@ -33,7 +33,7 @@ public class Topic_07_Textbox_TextArea {
 
     @BeforeClass
     public void beforeClass() {
-        System.setProperty("webdriver.chrome.driver", "/Users/long/Downloads/selenium/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/macbook/Downloads/selenium/chromedriver");
         driver = new ChromeDriver();
 
         name = "Donal Trump";

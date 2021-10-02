@@ -24,7 +24,7 @@ public class Topic_10_HandleButton_Radio_Checkbox_01 {
     @BeforeClass
     public void beforeClass()
     {
-        System.setProperty("webdriver.chrome.driver","/Users/long/Downloads/selenium/chromedriver");
+        System.setProperty("webdriver.chrome.driver","/Users/macbook/Downloads/selenium/chromedriver");
         driver = new ChromeDriver();
         jsExcutor = (JavascriptExecutor) driver;
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

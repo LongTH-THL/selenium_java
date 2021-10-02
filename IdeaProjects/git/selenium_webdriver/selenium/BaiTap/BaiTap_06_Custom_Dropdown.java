@@ -1,4 +1,4 @@
-package webdriver;
+package BaiTap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -18,7 +18,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 
-public class Topic_09_Custom_Dropdown_List {
+public class BaiTap_06_Custom_Dropdown {
     WebDriver driver;
     Select select;
     WebDriverWait explicitWait;
@@ -26,7 +26,7 @@ public class Topic_09_Custom_Dropdown_List {
 
     @BeforeClass
     public void beforeClass() {
-        System.setProperty("webdriver.chrome.driver", "/Users/macbook/Downloads/selenium/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/long/Downloads/selenium/chromedriver");
         driver = new ChromeDriver();
 
         // ep kieu tuong minh

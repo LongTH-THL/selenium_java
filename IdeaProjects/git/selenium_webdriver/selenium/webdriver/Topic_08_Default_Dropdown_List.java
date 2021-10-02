@@ -23,7 +23,7 @@ public class Topic_08_Default_Dropdown_List {
     @BeforeClass
     public void beforeClass()
     {
-        System.setProperty("webdriver.chrome.driver","/Users/long/Downloads/selenium/chromedriver");
+        System.setProperty("webdriver.chrome.driver","/Users/macbook/Downloads/selenium/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();

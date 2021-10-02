@@ -18,7 +18,7 @@ public class Topic_01_Check_Environment {
     public void beforeClass()
     {   //comment tung step vao
         // Bước 1: Lấy đường dẫn chromeDriver
-        System.setProperty("webdriver.chrome.driver", "/Users/long/Downloads/selenium/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/macbook/Downloads/selenium/chromedriver");
         // Bước 2: Khởi tạo
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
