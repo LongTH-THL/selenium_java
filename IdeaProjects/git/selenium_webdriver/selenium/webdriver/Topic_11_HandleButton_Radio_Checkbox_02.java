@@ -114,36 +114,30 @@ public class Topic_11_HandleButton_Radio_Checkbox_02 {
     public void ClickToElementByJS(By by){
         jsExcutor.executeScript("arguments[0].click();",driver.findElement(by));
     }
-
     public void  CheckToCheckbox(By by){
         if(!driver.findElement(by).isSelected()){
             driver.findElement(by).click();
         }
     }
-
     public void  CheckToCheckboxByJS(By by){
         if(!driver.findElement(by).isSelected()){
             jsExcutor.executeScript("arguments[0].click();",driver.findElement(by));
         }
     }
-
     public void  UnCheckToCheckbox(By by){
         if(driver.findElement(by).isSelected()){
             driver.findElement(by).click();
         }
     }
-
     public void  UnCheckToCheckboxByJS(By by){
         if(driver.findElement(by).isSelected()){
             jsExcutor.executeScript("arguments[0].click();",driver.findElement(by));
         }
     }
-
     public int randomData() {
         Random random = new Random();
         return random.nextInt(999999);
     }
-
     public void sleepInSecond(long timeoutInSecond){
         try {
             Thread.sleep(timeoutInSecond * 1000);

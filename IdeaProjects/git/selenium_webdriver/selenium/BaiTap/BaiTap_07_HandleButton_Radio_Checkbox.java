@@ -140,34 +140,28 @@ public class BaiTap_07_HandleButton_Radio_Checkbox {
             driver.findElement(by).click();
         }
     }
-
     public void UnCheckToCheckbox(By by){
         if(driver.findElement(by).isSelected()){
             driver.findElement(by).click();
         }
     }
-
     public void CheckToCheckboxByJs(By by){
         if(!driver.findElement(by).isSelected()){
             jsExecutor.executeScript("arguments[0].click();",driver.findElement(by));
         }
     }
-
     public void UnCheckToCheckboxByJs(By by){
         if (driver.findElement(by).isSelected()){
             jsExecutor.executeScript("arguments[0].click();",driver.findElement(by));
         }
     }
-
     public void ClickToElementByJs(By by){
         jsExecutor.executeScript("arguments[0].click();",driver.findElement(by));
     }
-
     public int randomData() {
         Random random = new Random();
         return random.nextInt(999999);
     }
-
     public void sleepInSecond(long timeoutInSecond){
         try {
             Thread.sleep(timeoutInSecond * 1000);
