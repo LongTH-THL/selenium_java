@@ -2,23 +2,26 @@ package webdriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 
 public class Topic_19_Upload_File {
     WebDriver driver;
-    String projectPath = System.getProperty("user.dir");
-    String meoName = "Meo.jpg";
+    String projectPath = System.getProperty("user.dir") + "/IdeaProjects/git/selenium_webdriver";
+    String meoName = "Meo.jpeg";
     String lanhName = "LAnh.jpg";
 
-    String uploadFilePath = projectPath + "/git/selenium_webdriver" + File.separator + "uploadFilePath" + File.separator;
+    String uploadFilePath = projectPath + File.separator + "uploadFilePath" + File.separator;
 
     String meoUploadFile = uploadFilePath + meoName;
     String lanhUploadFile = uploadFilePath + lanhName;
@@ -37,10 +40,46 @@ public class Topic_19_Upload_File {
         driver.get("https://blueimp.github.io/jQuery-File-Upload/");
 
         driver.findElement(By.xpath("//input[@type='file']")).sendKeys(meoUploadFile);
+        sleepInSecond(2);
         driver.findElement(By.xpath("//input[@type='file']")).sendKeys(lanhUploadFile);
+        sleepInSecond(2);
+
+        // Verify file upload success
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='" + meoName + "']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='" + lanhName + "']")).isDisplayed());
+
+        // Click to start button ==> upload
+        List<WebElement> startButton = driver.findElements(By.xpath("//td/button[contains(@class,'start')]"));
+        for (WebElement start:startButton){
+            start.click();
+            sleepInSecond(2);
+        }
+
+        // Verify file upload success
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='" + meoName + "']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='" + lanhName + "']")).isDisplayed());
     }
     @Test
-    public void TC_02_(){
+    public void TC_02_Sendkey_Multiple_file(){
+        driver.get("https://blueimp.github.io/jQuery-File-Upload/");
+
+        driver.findElement(By.xpath("//input[@type='file']")).sendKeys(meoUploadFile + "\n" + lanhUploadFile);
+        sleepInSecond(2);
+
+        // Verify file upload success
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='" + meoName + "']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='" + lanhName + "']")).isDisplayed());
+
+        // Click to start button ==> upload
+        List<WebElement> startButton = driver.findElements(By.xpath("//td/button[contains(@class,'start')]"));
+        for (WebElement start:startButton){
+            start.click();
+            sleepInSecond(2);
+        }
+        sleepInSecond(2);
+        // Verify file upload success
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='" + meoName + "']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='" + lanhName + "']")).isDisplayed());
     }
     @Test
     public void TC_03_(){
@@ -59,7 +98,7 @@ public class Topic_19_Upload_File {
         }
     }
 
-    //@AfterClass
+    @AfterClass
     public void afterClass()
     {
         driver.quit();
