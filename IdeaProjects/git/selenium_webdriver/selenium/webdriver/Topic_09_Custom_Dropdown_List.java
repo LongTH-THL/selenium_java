@@ -44,10 +44,15 @@ public class Topic_09_Custom_Dropdown_List {
         By parentBy = By.xpath("//span[@id='number-button']");
         By chilBy = By.xpath("//ul[@id='number-menu']/li/div");
 
-        selectItemDropdown(parentBy, chilBy, "18");
+        selectItemDropdown(parentBy, chilBy, "15");
         sleepInSecond(2);
 
-        Assert.assertTrue(isElementDisplay(By.xpath("//span[@id='number-button']/span[@class='ui-selectmenu-text' and text()='18']")));
+        Assert.assertTrue(isElementDisplay(By.xpath("//span[@id='number-button']/span[@class='ui-selectmenu-text' and text()='15']")));
+
+        selectItemDropdown(parentBy, chilBy, "19");
+        sleepInSecond(2);
+
+        Assert.assertTrue(isElementDisplay(By.xpath("//span[@id='number-button']/span[@class='ui-selectmenu-text' and text()='19']")));
     }
 
     @Test
